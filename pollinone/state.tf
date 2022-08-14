@@ -27,7 +27,7 @@ resource "aws_s3_bucket_versioning" "terraform-state-versioning" {
   }
 }
 
-resource aws_s3_bucket_server_side_encryption_configuration "terraform-state-encryption" {
+resource "aws_s3_bucket_server_side_encryption_configuration" "terraform-state-encryption" {
   bucket = aws_s3_bucket.terraform-state-pollinone-prod.id
   rule {
     apply_server_side_encryption_by_default {
